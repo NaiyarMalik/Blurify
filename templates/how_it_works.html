@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How it Works - Blurify</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/logo.png') }}">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Blurify Logo" class="logo-image">
+            <span>Blurify</span>
+        </div>
+        <nav>
+            <a href="/">Home</a>
+            <a href="/how-it-works" class="active">How it Works</a>
+            <a href="/privacy-policy">Privacy Policy</a>
+            <a href="/support">Support</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="page-content">
+            <h1>How Blurify Works</h1>
+            <p class="subtitle">Protect your privacy with advanced video blurring technology</p>
+            
+            <div class="steps-container">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Upload Your Video</h3>
+                        <p>Simply drag and drop your video file or click to browse. We support MP4 video files.</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Automatic Processing</h3>
+                        <p>Our advanced AI-powered system automatically applies a sophisticated blur effect to every frame of your video, ensuring complete privacy protection.</p>
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Download Securely</h3>
+                        <p>Your processed video is ready for download in seconds. We never store your files permanently. everything is processed in memory and deleted immediately.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="features-section">
+                <h2>Why Choose Blurify?</h2>
+                <div class="features-grid">
+                    <div class="feature">
+                        <div class="feature-icon">🔒</div>
+                        <h4>Privacy First</h4>
+                        <p>Your videos are never stored permanently! We process everything in memory and delete files immediately after processing.</p>
+                    </div>
+                    
+                    <div class="feature">
+                        <div class="feature-icon">🚨</div>
+                        <h4>Lightning Fast</h4>
+                        <p>Advanced algorithms ensure your videos are processed quickly without compromising on quality.</p>
+                    </div>
+                    
+                    <div class="feature">
+                        <div class="feature-icon">🎯</div>
+                        <h4>High Quality</h4>
+                        <p>Maintain your video's original quality while applying effective blurring for privacy protection.</p>
+                    </div>
+                    
+                    <div class="feature">
+                        <div class="feature-icon">🌐</div>
+                        <h4>No Installation</h4>
+                        <p>Use Blurify directly in your browser. No software downloads or installations required.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="cta-section">
+                <h2>Ready to Protect Your Privacy?</h2>
+                <p>Start blurring your videos now with our secure, fast, and easy-to-use platform.</p>
+                <a href="/" class="cta-button">Get Started</a>
+            </div>
+        </div>
+    </main>
+</body>
+</html> 

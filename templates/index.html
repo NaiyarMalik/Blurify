@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blurify</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='images/logo.png') }}">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="{{ url_for('static', filename='images/logo.png') }}" alt="Blurify Logo" class="logo-image">
+            <span><span style ="color:#4F46E5">B</span>lurify</span>
+        </div>
+        <nav>
+            <a href="/how-it-works">How it Works</a>
+            <a href="/privacy-policy">Privacy Policy</a>
+            <a href="/support">Support</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="main-content">
+            <h1><span style ="color:#4F46E5">B</span>lurify</h1>
+            <p class="animated-line">
+            Video privacy protection. Automatically blur
+            <span class="word-slider">
+                <span>license plates</span>
+                <span>people's faces</span>
+                <span>phone screens</span>
+                <span>credit cards</span>
+            </span>
+            in your videos.
+            </p>            
+            <div id="drop-zone">
+                <div class="drop-zone-inner">
+                    <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect x="4" y="8" width="40" height="32" rx="4" stroke="#9CA3AF" stroke-width="2"/>
+                        <path d="M18 24L24 18L30 24" stroke="#9CA3AF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M24 18V30" stroke="#9CA3AF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>                        
+                    <p><b>Upload Video</b></p>
+                    <p>Drag and drop your video file here, or click to browse</p>
+                </div>
+                <input type="file" id="file-input" accept="video/*" style="display: none;">
+            </div>
+            
+            <div class="video-preview-container" id="video-preview-container" style="display: none;">
+                <div class="video-preview">
+                    <video id="video-preview" muted>
+                        Your browser does not support the video tag.
+                    </video>
+                    <div class="video-overlay" id="video-overlay">
+                        <div class="checkmark" id="checkmark" style="display: none;">
+                            <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="40" cy="40" r="40" fill="#4F46E5"/>
+                                <path d="M25 40L35 50L55 30" stroke="white" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="progress-container" id="progress-container" style="display: none;">
+                <div class="progress-info">
+                    <span id="filename">filename.mp4</span>
+                    <span id="progress-percentage">0%</span>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress-fill"></div>
+                </div>
+                <div class="progress-status" id="progress-status">Uploading...</div>
+            </div>
+            
+            <div id="status"></div>
+            
+            <button id="select-video-btn">Select Video File</button>
+        </div>
+    </main>
+    
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html> 
